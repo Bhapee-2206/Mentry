@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mentry Solutions | Trainer Network &amp; Professional Training Services</title>
+  <meta name="description"
+    content="Live, industry-focused technology programs designed for college students, freshers and aspiring developers. Learn with experienced trainers and attend weekly in-person doubt-clearing sessions.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS v3 CDN with Config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d2149",
+            "primary-container": "#002151",
+            "secondary": "#0284c7",
+            "secondary-container": "#e0f2fe",
+            "tertiary": "#000c27",
+            "on-surface": "#131b2e",
+            "on-surface-variant": "#495057",
+            "outline": "#75777f",
+            "outline-variant": "#e2e8f0",
+            "surface": "#ffffff",
+            "surface-container-low": "#f8fafc",
+            "surface-container": "#f1f5f9",
+            "surface-container-high": "#e2e8f0"
+          },
+          fontFamily: {
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    /* Active navigation indicator */
+    .nav-link.active {
+      color: #0284c7;
+      font-weight: 600;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #0284c7;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface text-on-surface antialiased font-body-md selection:bg-secondary-container selection:text-primary overflow-x-hidden w-full">
+
+  <!-- ==================================================
+1. CLEAN PROFESSIONAL SINGLE-ROW HEADER
+================================================== -->
+  <header
+    class="top-0 sticky z-50 bg-white border-b border-slate-200/90 shadow-[0_1px_3px_0_rgba(0,0,0,0.03)] w-full transition-all">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-[74px] flex items-center justify-between gap-4">
+
+      <!-- LEFT: Mentry Solutions Logo + Brand Title -->
+      <a class="flex items-center gap-3 shrink-0 group transition-opacity hover:opacity-95" href="#hero">
+        <div
+          class="relative w-11 h-11 rounded-xl overflow-hidden flex items-center justify-center p-1 bg-white border border-outline-variant shadow-xs group-hover:border-secondary/40 transition-colors shrink-0">
+          <img alt="Mentry Solutions Logo" class="w-full h-full object-contain" src="assets/images/logo.png"
+            onerror="this.src='assets/images/logo.svg'">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-headline-sm font-bold text-primary tracking-tight leading-tight">Mentry
+            Solutions</span>
+          <span class="text-[10px] tracking-normal text-secondary font-medium -mt-0.5 hidden xl:block">Trainer Network
+            &amp; Professional Training Services</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Desktop Primary Navigation (5 Items) -->
+      <nav class="hidden lg:flex items-center space-x-7 xl:space-x-8 text-[13px] font-medium shrink-0">
+        <a class="nav-link relative text-on-surface hover:text-secondary transition-colors py-1" href="#programs"
+          id="nav-programs">Programs</a>
+        <a class="nav-link relative text-on-surface hover:text-secondary transition-colors py-1" href="#why-mentry"
+          id="nav-why-mentry">Why Mentry</a>
+
+        <!-- Learning Dropdown -->
+        <div class="relative group/dropdown" id="learningDropdownContainer">
+          <button aria-expanded="false"
+            class="nav-link relative flex items-center gap-1 text-on-surface hover:text-secondary transition-colors py-1 focus:outline-none"
+            id="nav-learning" type="button">
+            <span>Learning</span>
+            <span
+              class="material-symbols-outlined text-base transition-transform duration-200 group-hover/dropdown:rotate-180"
+              id="learningArrow">expand_more</span>
+          </button>
+          <!-- Dropdown Menu -->
+          <div class="absolute left-0 top-full pt-2 hidden group-hover/dropdown:block z-50" id="learningDropdownMenu">
+            <div class="w-56 bg-white rounded-xl shadow-lg border border-outline-variant py-2">
+              <a class="flex items-center gap-3 px-4 py-2.5 text-xs text-on-surface hover:bg-surface-container hover:text-secondary transition-colors"
+                href="#methodology">
+                <span class="material-symbols-outlined text-base text-secondary">psychology</span>
+                <span class="font-medium">How We Teach</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2.5 text-xs text-on-surface hover:bg-surface-container hover:text-secondary transition-colors"
+                href="#offline-support">
+                <span class="material-symbols-outlined text-base text-secondary">meeting_room</span>
+                <span class="font-medium">Offline Doubt Support</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2.5 text-xs text-on-surface hover:bg-surface-container hover:text-secondary transition-colors"
+                href="#curriculum">
+                <span class="material-symbols-outlined text-base text-secondary">menu_book</span>
+                <span class="font-medium">Curriculum</span>
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2.5 text-xs text-on-surface hover:bg-surface-container hover:text-secondary transition-colors"
+                href="#projects">
+                <span class="material-symbols-outlined text-base text-secondary">terminal</span>
+                <span class="font-medium">Projects</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-link relative text-on-surface hover:text-secondary transition-colors py-1" href="#career-support"
+          id="nav-career-support">Career Support</a>
+        <a class="nav-link relative text-on-surface hover:text-secondary transition-colors py-1" href="#faq"
+          id="nav-faq">FAQ</a>
+      </nav>
+
+      <!-- RIGHT: Desktop Action Buttons (Student Login + Enquire Now) -->
+      <div class="hidden lg:flex items-center gap-3 shrink-0 whitespace-nowrap">
+        <button
+          class="shrink-0 px-3.5 py-2 text-on-surface font-label-md text-xs font-semibold hover:text-secondary hover:bg-surface-container rounded-lg border border-outline-variant transition-colors duration-150"
+          onclick="openStudentLoginModal()" type="button">
+          Student Login
+        </button>
+        <a class="shrink-0 px-4 py-2 bg-primary text-white font-label-md font-semibold rounded-lg hover:bg-primary/90 shadow-xs transition-colors duration-150 flex items-center gap-1.5 text-xs"
+          href="#contact">
+          <span>Enquire Now</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button aria-label="Toggle Navigation Menu"
+        class="lg:hidden p-2 text-primary hover:text-secondary focus:outline-none rounded-lg hover:bg-surface-container transition-colors shrink-0"
+        id="mobileMenuBtn">
+        <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+      </button>
+    </div>
+
+    <!-- MOBILE DRAWER PANEL -->
+    <div class="hidden lg:hidden bg-white border-b border-outline-variant px-5 sm:px-6 py-5 transition-all duration-300"
+      id="mobileMenu">
+      <div class="flex flex-col space-y-1">
+        <a class="mobile-nav-link text-on-surface font-medium py-2.5 border-b border-slate-100 text-sm hover:text-secondary"
+          href="#programs">Programs</a>
+        <a class="mobile-nav-link text-on-surface font-medium py-2.5 border-b border-slate-100 text-sm hover:text-secondary"
+          href="#why-mentry">Why Mentry</a>
+
+        <!-- Mobile Learning Accordion -->
+        <div class="border-b border-slate-100">
+          <button
+            class="w-full flex items-center justify-between text-on-surface font-medium py-2.5 text-sm focus:outline-none hover:text-secondary"
+            id="mobileLearningBtn" type="button">
+            <span>Learning</span>
+            <span class="material-symbols-outlined text-base transition-transform"
+              id="mobileLearningIcon">expand_more</span>
+          </button>
+          <div class="hidden pl-3 pb-2 space-y-1 bg-surface-container-low rounded-lg my-1 py-2"
+            id="mobileLearningAccordion">
+            <a class="mobile-nav-link flex items-center gap-2 text-xs text-on-surface-variant hover:text-secondary py-1.5"
+              href="#methodology">
+              <span class="material-symbols-outlined text-sm text-secondary">psychology</span>
+              <span>How We Teach</span>
+            </a>
+            <a class="mobile-nav-link flex items-center gap-2 text-xs text-on-surface-variant hover:text-secondary py-1.5"
+              href="#offline-support">
+              <span class="material-symbols-outlined text-sm text-secondary">meeting_room</span>
+              <span>Offline Doubt Support</span>
+            </a>
+            <a class="mobile-nav-link flex items-center gap-2 text-xs text-on-surface-variant hover:text-secondary py-1.5"
+              href="#curriculum">
+              <span class="material-symbols-outlined text-sm text-secondary">menu_book</span>
+              <span>Curriculum</span>
+            </a>
+            <a class="mobile-nav-link flex items-center gap-2 text-xs text-on-surface-variant hover:text-secondary py-1.5"
+              href="#projects">
+              <span class="material-symbols-outlined text-sm text-secondary">terminal</span>
+              <span>Projects</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="mobile-nav-link text-on-surface font-medium py-2.5 border-b border-slate-100 text-sm hover:text-secondary"
+          href="#career-support">Career Support</a>
+        <a class="mobile-nav-link text-on-surface font-medium py-2.5 border-b border-slate-100 text-sm hover:text-secondary"
+          href="#faq">FAQ</a>
+
+        <!-- Mobile Actions -->
+        <div class="flex flex-col gap-2.5 pt-4">
+          <button
+            class="w-full py-2.5 text-on-surface font-label-md border border-outline-variant rounded-lg flex items-center justify-center text-xs font-semibold hover:bg-surface-container"
+            onclick="openStudentLoginModal(); closeMobileMenu();" type="button">
+            Student Login
+          </button>
+          <a class="w-full text-center py-2.5 bg-primary text-white font-label-md font-semibold rounded-lg shadow-xs text-xs hover:bg-primary/90"
+            href="#contact" onclick="closeMobileMenu();">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- STUDENT LOGIN CLEAN MODAL -->
+  <div aria-labelledby="loginModalTitle" aria-modal="true"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs transition-opacity"
+    id="studentLoginModal" role="dialog">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-7 shadow-xl border border-outline-variant relative">
+      <button aria-label="Close dialog"
+        class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
+        onclick="closeStudentLoginModal()" type="button">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="w-10 h-10 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-2xl">lock</span>
+        </div>
+        <div>
+          <h3 class="text-lg font-headline-sm font-bold text-primary" id="loginModalTitle">Student Login</h3>
+          <p class="text-xs text-secondary font-medium">Mentry Student Learning Portal</p>
+        </div>
+      </div>
+      <div class="bg-surface-container-low border border-outline-variant rounded-xl p-4 mb-5">
+        <p class="text-sm font-semibold text-primary">Student login is coming soon.</p>
+        <p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+          The dedicated student portal is currently in active preparation. Enrolled batch students receive all live
+          session links and course material credentials directly via their registered email and WhatsApp group.
+        </p>
+      </div>
+      <div class="flex justify-end gap-2.5">
+        <button
+          class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-on-surface font-semibold text-xs rounded-lg transition-colors"
+          onclick="closeStudentLoginModal()" type="button">
+          Close
+        </button>
+        <a class="px-4 py-2 bg-primary hover:bg-primary/90 text-white font-semibold text-xs rounded-lg transition-colors"
+          href="#contact" onclick="closeStudentLoginModal()">
+          Enquire for New Batch
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================
+2. HERO SECTION (VISUALLY CONNECTED & BALANCED 50/50)
+================================================== -->
+  <section class="py-14 sm:py-20 lg:pt-20 lg:pb-24 bg-surface-container-low border-b border-outline-variant" id="hero">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Column (Max widths: heading 650px, paragraph 580px) -->
+        <div class="lg:col-span-7 flex flex-col items-start space-y-5">
+
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-primary leading-tight tracking-tight max-w-[650px]">
+            Build Skills.<br>
+            Build Projects.<br>
+            <span class="text-secondary">Build Your Career.</span>
+          </h1>
+          <p class="text-base sm:text-lg font-body-lg text-on-surface-variant max-w-[580px] leading-relaxed">
+            Live, industry-focused technology programs designed for college students, freshers and aspiring developers.
+          </p>
+
+          <!-- Core Program Information Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 w-full py-1">
+            <div class="p-3 bg-white border border-outline-variant rounded-xl shadow-xs">
+              <div class="flex items-center gap-1.5 text-primary font-semibold text-xs mb-0.5">
+                <span class="material-symbols-outlined text-secondary text-base">calendar_month</span>
+                <span>3–4 Months</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant block">Duration</span>
+            </div>
+            <div class="p-3 bg-white border border-outline-variant rounded-xl shadow-xs">
+              <div class="flex items-center gap-1.5 text-primary font-semibold text-xs mb-0.5">
+                <span class="material-symbols-outlined text-secondary text-base">event_available</span>
+                <span>5 Days / Week</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant block">Live Schedule</span>
+            </div>
+            <div class="p-3 bg-white border border-outline-variant rounded-xl shadow-xs">
+              <div class="flex items-center gap-1.5 text-primary font-semibold text-xs mb-0.5">
+                <span class="material-symbols-outlined text-secondary text-base">timer</span>
+                <span>1 Hour / Class</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant block">Live Session</span>
+            </div>
+            <div class="p-3 bg-white border border-outline-variant rounded-xl shadow-xs">
+              <div class="flex items-center gap-1.5 text-primary font-semibold text-xs mb-0.5">
+                <span class="material-symbols-outlined text-secondary text-base">devices</span>
+                <span>Live Online</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant block">Delivery Mode</span>
+            </div>
+            <div class="p-3 bg-white border border-outline-variant rounded-xl shadow-xs col-span-2 sm:col-span-1">
+              <div class="flex items-center gap-1.5 text-primary font-semibold text-xs mb-0.5">
+                <span class="material-symbols-outlined text-secondary text-base">meeting_room</span>
+                <span>Weekly Offline</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant block">Doubt Support</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto pt-2">
+            <a class="w-full sm:w-auto px-7 py-3 bg-primary text-white font-label-md font-semibold rounded-lg hover:bg-primary/90 shadow-xs transition-colors text-center flex items-center justify-center gap-2 text-sm"
+              href="#programs">
+              <span>Explore Programs</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            <a class="w-full sm:w-auto px-7 py-3 bg-white border border-outline-variant text-primary font-label-md font-semibold rounded-lg hover:bg-surface-container transition-colors text-center flex items-center justify-center gap-2 text-sm"
+              href="#contact">
+              <span class="material-symbols-outlined text-base text-secondary">support_agent</span>
+              <span>Talk to Us</span>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-2 pt-1 text-xs text-on-surface-variant font-medium">
+            <span class="material-symbols-outlined text-secondary text-sm">verified</span>
+            <span>Live instructor-led training • Practical projects • Industry-recognized certificate</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Real Training Photography Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-white p-2.5 rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+            <div class="overflow-hidden rounded-xl aspect-[4/3] bg-surface-container">
+              <img alt="Experienced instructor teaching technology students in modern classroom"
+                class="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-transform duration-500"
+                src="assets/images/hero-classroom.jpg"
+                onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XyYQkIJ-iICQzcn9WhBJ7LYhLUmuvMgGPuygaqox47OjPTccnAwUV-yQw8HjpxqkrcT4Xr19iYkogpwix18Cl58Za_oGNHD393nHsZhnzr3fdjiznL7EQ6en14Gpc1MAZClMCorhedPPtWkLF39pTHiuDMwkEGQXon1gCkZy-Z6D5U0Rz03cSDoc_CGgq2ypvxD-ySdSBQgpY7pZ0k1W_YsS6VmZ49BrHj74H712-BbJEz3-Gz8VhuTack'">
+            </div>
+            <div
+              class="px-3.5 py-2.5 flex items-center justify-between text-xs text-on-surface-variant bg-surface-container-low rounded-lg mt-2.5">
+              <span class="flex items-center gap-1.5 font-medium text-primary">
+                <span class="material-symbols-outlined text-secondary text-base">school</span>
+                Interactive Live Training
+              </span>
+              <span class="text-on-surface-variant">5 Days Live + 1 Offline / Week</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+3. OUR PROGRAMS SECTION (CLEAN CARDS, CONSISTENT HEIGHT)
+================================================== -->
+  <section class="py-16 md:py-24 bg-white border-b border-outline-variant" id="programs">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">OUR PROGRAMS</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Technology Training
+          Programs</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Carefully sequenced live programs designed for college students, freshers, and aspiring developers entering
+          tech.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <!-- Program 1: Java Development -->
+        <div
+          class="bg-surface-container-low rounded-2xl border border-outline-variant flex flex-col justify-between overflow-hidden shadow-xs hover:border-secondary/50 transition-colors">
+          <div class="p-7 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-outline-variant">
+              <span class="px-2.5 py-1 rounded bg-primary text-white font-label-sm text-xs font-semibold">SOFTWARE
+                TRACK</span>
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-secondary">
+                <span class="material-symbols-outlined text-base">timelapse</span>
+                <span>3–4 Months Duration</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold font-headline-md text-primary mt-4">Java Development</h3>
+            <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Foundational to intermediate Java programming covering logic building, object-oriented concepts, exception
+              handling, data structures, SQL databases, and practical project development.
+            </p>
+
+            <!-- Key Specs Table -->
+            <div class="grid grid-cols-2 gap-3 my-5 p-3.5 bg-white rounded-xl border border-outline-variant text-xs">
+              <div>
+                <span class="text-on-surface-variant block">Schedule</span>
+                <strong class="text-primary font-semibold">5 Days / Week Live</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Class Duration</span>
+                <strong class="text-primary font-semibold">1 Hour / Day</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Mode</span>
+                <strong class="text-primary font-semibold">Live Online + Weekly Offline</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Certificate</span>
+                <strong class="text-primary font-semibold">Official Completion</strong>
+              </div>
+            </div>
+
+            <!-- Highlights -->
+            <div class="space-y-2 border-t border-outline-variant pt-4 text-xs sm:text-sm text-on-surface">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Variables, conditionals, loops, and core problem solving</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>OOP principles: encapsulation, inheritance, polymorphism, abstraction</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Connecting Java applications to SQL relational databases</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Final practical project: Management System or Banking App</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border-t border-outline-variant flex flex-col sm:flex-row gap-3">
+            <a class="w-full sm:flex-1 py-2.5 px-4 bg-primary text-white font-label-md font-semibold rounded-lg text-center hover:bg-primary/90 transition-colors text-xs"
+              href="#contact">
+              Enquire Now
+            </a>
+            <a class="w-full sm:flex-1 py-2.5 px-4 bg-surface-container border border-outline-variant text-primary font-label-md font-semibold rounded-lg text-center hover:bg-slate-200 transition-colors text-xs"
+              href="#curriculum" onclick="switchCurriculum('java')">
+              View Curriculum
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 2: AI & Machine Learning -->
+        <div
+          class="bg-surface-container-low rounded-2xl border border-outline-variant flex flex-col justify-between overflow-hidden shadow-xs hover:border-secondary/50 transition-colors">
+          <div class="p-7 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-outline-variant">
+              <span class="px-2.5 py-1 rounded bg-primary text-white font-label-sm text-xs font-semibold">APPLIED
+                TRACK</span>
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-secondary">
+                <span class="material-symbols-outlined text-base">timelapse</span>
+                <span>3–4 Months Duration</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold font-headline-md text-primary mt-4">AI &amp; Machine Learning</h3>
+            <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Foundational Python programming for data, exploratory analysis with Pandas, core machine learning
+              algorithms, model evaluation metrics, and practical machine learning project delivery.
+            </p>
+
+            <!-- Key Specs Table -->
+            <div class="grid grid-cols-2 gap-3 my-5 p-3.5 bg-white rounded-xl border border-outline-variant text-xs">
+              <div>
+                <span class="text-on-surface-variant block">Schedule</span>
+                <strong class="text-primary font-semibold">5 Days / Week Live</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Class Duration</span>
+                <strong class="text-primary font-semibold">1 Hour / Day</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Mode</span>
+                <strong class="text-primary font-semibold">Live Online + Weekly Offline</strong>
+              </div>
+              <div>
+                <span class="text-on-surface-variant block">Certificate</span>
+                <strong class="text-primary font-semibold">Official Completion</strong>
+              </div>
+            </div>
+
+            <!-- Highlights -->
+            <div class="space-y-2 border-t border-outline-variant pt-4 text-xs sm:text-sm text-on-surface">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Python fundamentals, functions, collections, and basic OOP</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Data manipulation, cleaning, and statistical distributions with Pandas</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Core supervised algorithms: regression, classification, decision trees</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary text-base">check</span>
+                <span>Final practical project: End-to-End Predictive Model</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border-t border-outline-variant flex flex-col sm:flex-row gap-3">
+            <a class="w-full sm:flex-1 py-2.5 px-4 bg-primary text-white font-label-md font-semibold rounded-lg text-center hover:bg-primary/90 transition-colors text-xs"
+              href="#contact">
+              Enquire Now
+            </a>
+            <a class="w-full sm:flex-1 py-2.5 px-4 bg-surface-container border border-outline-variant text-primary font-label-md font-semibold rounded-lg text-center hover:bg-slate-200 transition-colors text-xs"
+              href="#curriculum" onclick="switchCurriculum('ai')">
+              View Curriculum
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+4. WHY MENTRY SECTION
+================================================== -->
+  <section class="py-16 md:py-20 bg-surface-container-low border-b border-outline-variant" id="why-mentry">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">WHY MENTRY</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">A Grounded, Practical
+          Learning Experience</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Built specifically to bridge the gap between academic theory and practical software development for beginners
+          and aspiring developers.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-11 h-11 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center text-secondary mb-4 shadow-xs">
+            <span class="material-symbols-outlined text-2xl">co_present</span>
+          </div>
+          <h3 class="text-base font-bold text-primary font-headline-sm">Experienced Trainers</h3>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Live instruction from practitioners
+            who explain programming logic from first principles without jargon.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-11 h-11 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center text-secondary mb-4 shadow-xs">
+            <span class="material-symbols-outlined text-2xl">schedule</span>
+          </div>
+          <h3 class="text-base font-bold text-primary font-headline-sm">1 Hour / Day Focus</h3>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Strictly 1 hour per live session, 5
+            days a week. Manageable, consistent, and designed to prevent cognitive burnout.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-11 h-11 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center text-secondary mb-4 shadow-xs">
+            <span class="material-symbols-outlined text-2xl">meeting_room</span>
+          </div>
+          <h3 class="text-base font-bold text-primary font-headline-sm">Weekly In-Person Hub</h3>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">One offline session per week at our
+            center to discuss code errors and clear conceptual doubts in person.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-11 h-11 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center text-secondary mb-4 shadow-xs">
+            <span class="material-symbols-outlined text-2xl">laptop_mac</span>
+          </div>
+          <h3 class="text-base font-bold text-primary font-headline-sm">Practical Applications</h3>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Step-by-step problem-solving and
+            guided project development to build authentic portfolio confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+5. HOW WE TEACH (METHODOLOGY SECTION)
+================================================== -->
+  <section class="py-16 md:py-24 bg-white border-b border-outline-variant" id="methodology">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">HOW WE TEACH</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">A Disciplined 6-Step
+          Learning Flow</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Designed to take you step-by-step from foundational concepts to working code through continuous practice and
+          in-person review.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Step 1 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                01</span>
+              <span class="material-symbols-outlined text-primary text-2xl">cast_for_education</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Live Class</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Attend daily 1-hour live interactive online lectures. Observe the trainer coding live and ask questions
+              during the session.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">5 Days / Week • 1
+            Hour Live</div>
+        </div>
+        <!-- Step 2 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                02</span>
+              <span class="material-symbols-outlined text-primary text-2xl">code</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Practice &amp; Assignments</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Apply what you learn through
+              coding exercises and practical assignments.</p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">Coding Exercises
+            &amp; Assignments</div>
+        </div>
+        <!-- Step 3 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                03</span>
+              <span class="material-symbols-outlined text-primary text-2xl">meeting_room</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Offline Doubt Support</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Visit our designated location once a week. Review tricky bugs and discuss programming roadblocks with
+              mentors in person.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">1 Session / Week
+            In-Person</div>
+        </div>
+        <!-- Step 4 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                04</span>
+              <span class="material-symbols-outlined text-primary text-2xl">layers</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Project Work</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Build a practical application integrating core programming, database connections, and organized code
+              structure.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">Practical Working
+            Codebase</div>
+        </div>
+        <!-- Step 5 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                05</span>
+              <span class="material-symbols-outlined text-primary text-2xl">assignment</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Career Preparation</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Tailor your technical resume, review your LinkedIn profile, and participate in mock technical interview
+              sessions.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">Resume &amp; Mock
+            Interview Coaching</div>
+        </div>
+        <!-- Step 6 -->
+        <div
+          class="p-7 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-xs font-mono font-bold px-2 py-1 bg-white text-secondary rounded border border-outline-variant">STEP
+                06</span>
+              <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+            </div>
+            <h3 class="text-lg font-bold text-primary font-headline-sm">Certificate &amp; Placement Support</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Earn your Mentry Solutions Certificate of Completion upon finishing the syllabus, with placement
+              assistance provided.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-outline-variant text-xs text-secondary font-medium">Certificate of
+            Completion</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+6. OFFLINE DOUBT SUPPORT FEATURE SECTION
+================================================== -->
+  <section class="py-16 md:py-24 bg-surface-container-low border-b border-outline-variant" id="offline-support">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Mentoring Photograph -->
+        <div class="lg:col-span-6 order-2 lg:order-1">
+          <div class="bg-white p-2.5 rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+            <div class="overflow-hidden rounded-xl aspect-[16/10]">
+              <img alt="Trainer leaning over laptop reviewing code with students during doubt session"
+                class="w-full h-full object-cover object-center" src="assets/images/mentoring-lab.jpg"
+                onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1X8PvBj6nWc3DmCUpPT9opUGAV93J516SH6tCKyBusodirsprQduu5WFcGbjz8bNuPo9fBXePRYGlg8kN8MFWaSkw_5mRCUr56rY-c7N1qehh-OfJyvc-syFm0LQJSYon-aJBxE0QFE05p63cUayu5VElqKDfCYJVLgp5LsUKgrdAeQiUTfahq3bzDfY8xmbyhrFAD03hsR9r2jW8SdIRNBAKa47ifj5FGHLWugoPbZ5eRx4Vp86LPUYIQn'">
+            </div>
+            <div
+              class="p-3 bg-surface-container-low text-xs text-on-surface-variant flex items-center justify-between border-t border-outline-variant mt-2 rounded-lg">
+              <span class="font-semibold text-primary">Mentry Designated Training Hub</span>
+              <span class="text-secondary font-medium">One Offline Session Per Week</span>
+            </div>
+          </div>
+        </div>
+        <!-- Narrative Copy -->
+        <div class="lg:col-span-6 order-1 lg:order-2 space-y-5">
+          <div
+            class="inline-block px-3 py-1 rounded-md bg-secondary-container border border-secondary/20 text-secondary font-label-sm font-semibold text-xs tracking-wider">
+            OFFLINE DOUBT SUPPORT
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary tracking-tight">
+            Online Lectures.<br>Real Human Doubt Support.
+          </h2>
+          <p class="text-base font-body-lg text-on-surface-variant leading-relaxed">
+            Students attend live online classes throughout the week (1 hour per day, 5 days a week) and receive
+            dedicated offline doubt-clearing support once a week at the designated Mentry location.
+          </p>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-outline-variant shadow-xs">
+              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">location_on</span>
+              <div>
+                <h4 class="text-sm font-bold text-primary">Dedicated Mentry Location</h4>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-1 leading-relaxed">Exact physical center
+                  location details, batch schedules, and lab room timings are shared directly during enrollment.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-outline-variant shadow-xs">
+              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">terminal</span>
+              <div>
+                <h4 class="text-sm font-bold text-primary">Concept &amp; Coding Doubt Support</h4>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-1 leading-relaxed">Bring your programming and
+                  project-related doubts and work through them with the trainer during the weekly offline session.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-outline-variant shadow-xs">
+              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">group</span>
+              <div>
+                <h4 class="text-sm font-bold text-primary">Focused Peer Discussion</h4>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-1 leading-relaxed">Study and discuss assignments
+                  alongside fellow cohort members in a dedicated, supportive learning environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+7. DETAILED CURRICULUM SYLLABUS
+================================================== -->
+  <section class="py-16 md:py-24 bg-white border-b border-outline-variant" id="curriculum">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">DETAILED
+          CURRICULUM</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Comprehensive Course
+          Syllabus</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Structured week-by-week curriculum built around practical application, problem solving, and in-person review.
+        </p>
+      </div>
+
+      <!-- Tab Controls -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex p-1.5 bg-surface-container rounded-xl border border-outline-variant">
+          <button
+            class="px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 bg-primary text-white shadow-xs"
+            id="tabJavaBtn" onclick="switchCurriculum('java')" type="button">
+            Java Development
+          </button>
+          <button
+            class="px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 text-on-surface-variant hover:text-primary"
+            id="tabAiBtn" onclick="switchCurriculum('ai')" type="button">
+            AI &amp; Machine Learning
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Java Syllabus -->
+      <div class="space-y-4 max-w-4xl mx-auto" id="javaCurriculum">
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 1: Programming Foundations &amp; Java Syntax</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 1–3</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Introduction to JDK, JVM, variables, primitive types, conditional operators, loops (for, while, do-while),
+            methods, array basics, and writing clean console programs.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 2: Object-Oriented Programming (OOP)</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 4–7</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Classes, objects, constructors, encapsulation, getters/setters, inheritance, polymorphism, abstract classes,
+            interfaces, method overriding, and packages.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 3: Exception Handling &amp; Collections Framework</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 8–10</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Try-catch-finally, custom exceptions, ArrayList, LinkedList, HashSet, HashMap, iterators, comparator vs
+            comparable, and file I/O operations.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 4: Database Integration &amp; Final Project</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 11–14</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Relational SQL databases (MySQL/PostgreSQL), tables, keys, CRUD operations, JDBC drivers, PreparedStatement,
+            and full-stack project development.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tab 2: AI & ML Syllabus -->
+      <div class="space-y-4 max-w-4xl mx-auto hidden" id="aiCurriculum">
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 1: Python Programming for Data Science</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 1–3</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Python syntax, functions, data structures (lists, tuples, dicts), comprehension, file parsing, and writing
+            reusable modular scripts.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 2: Scientific Libraries (NumPy, Pandas &amp; Matplotlib)
+            </h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 4–7</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Multi-dimensional arrays with NumPy, tabular data manipulation with Pandas, missing value imputation,
+            statistical summaries, and exploratory charting with Matplotlib/Seaborn.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 3: Core Machine Learning Algorithms</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 8–11</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Supervised learning concepts, train/test splitting, Linear Regression, Logistic Regression, Decision Trees,
+            Random Forests, and cross-validation with Scikit-Learn.
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl border border-outline-variant p-6">
+          <div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+            <h4 class="text-base font-bold text-primary">Module 4: Model Evaluation &amp; Capstone Project</h4>
+            <span class="text-xs font-semibold text-secondary">Weeks 12–14</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-3 leading-relaxed">
+            Confusion matrix, precision, recall, F1-score, ROC-AUC, hyperparameters tuning, model serialization
+            (pickle/joblib), and end-to-end predictive pipeline capstone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+8. PRACTICAL STUDENT PROJECTS
+================================================== -->
+  <section class="py-16 md:py-24 bg-surface-container-low border-b border-outline-variant" id="projects">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">HANDS-ON
+          MILESTONES</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Build Practical
+          Projects</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Students work on practical projects based on the program curriculum and trainer guidance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="text-xs font-mono font-semibold text-primary px-2 py-0.5 bg-surface-container border border-outline-variant rounded">JAVA
+                TRACK</span>
+              <span class="text-xs text-on-surface-variant font-medium">Database Application</span>
+            </div>
+            <h4 class="text-base font-bold text-primary">Student Management System</h4>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Console and database-driven application handling student records, course enrollment, and grade
+              calculations using Core Java and SQL.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Core
+                Java</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">OOP</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">SQL
+                Database</span>
+            </div>
+          </div>
+          <div
+            class="mt-5 pt-3 border-t border-outline-variant text-xs font-semibold text-secondary flex items-center justify-between">
+            <span>Practical Milestone</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="text-xs font-mono font-semibold text-primary px-2 py-0.5 bg-surface-container border border-outline-variant rounded">JAVA
+                TRACK</span>
+              <span class="text-xs text-on-surface-variant font-medium">Backend Application</span>
+            </div>
+            <h4 class="text-base font-bold text-primary">Banking &amp; Account Manager</h4>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Menu-driven banking system implementing deposit, withdrawal, transaction logs, and account validation
+              using Java collections.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Java</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Collections</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">File
+                I/O</span>
+            </div>
+          </div>
+          <div
+            class="mt-5 pt-3 border-t border-outline-variant text-xs font-semibold text-secondary flex items-center justify-between">
+            <span>Core Java Project</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="p-6 bg-white rounded-xl border border-outline-variant shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="text-xs font-mono font-semibold text-primary px-2 py-0.5 bg-surface-container border border-outline-variant rounded">AI/ML
+                TRACK</span>
+              <span class="text-xs text-on-surface-variant font-medium">Predictive Pipeline</span>
+            </div>
+            <h4 class="text-base font-bold text-primary">Customer Churn Predictor</h4>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Supervised machine learning model training on customer behavior data to classify churn risk using Logistic
+              Regression and Decision Trees.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Python</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Pandas</span>
+              <span
+                class="text-[11px] font-mono px-2 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface-variant">Scikit-Learn</span>
+            </div>
+          </div>
+          <div
+            class="mt-5 pt-3 border-t border-outline-variant text-xs font-semibold text-secondary flex items-center justify-between">
+            <span>ML Capstone Milestone</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+9. HONEST CAREER SUPPORT SECTION
+================================================== -->
+  <section class="py-16 md:py-24 bg-white border-b border-outline-variant" id="career-support">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">CAREER PREPARATION</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Deliberate Career
+          Milestones</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Structured guidance to translate course knowledge into confident interview readiness.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center mb-4">1
+          </div>
+          <h4 class="text-base font-bold text-primary">Resume Preparation</h4>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Guided resume structuring focusing
+            on clear formatting, technical skills, and completed project descriptions.</p>
+        </div>
+        <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center mb-4">2
+          </div>
+          <h4 class="text-base font-bold text-primary">LinkedIn Profile</h4>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Professional profile optimization,
+            clear project documentation, and recommendations for presenting skills online.</p>
+        </div>
+        <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center mb-4">3
+          </div>
+          <h4 class="text-base font-bold text-primary">Mock Interviews</h4>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Foundational technical
+            problem-solving sessions and standard interview questions with constructive mentor feedback.</p>
+        </div>
+        <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant shadow-xs">
+          <div
+            class="w-8 h-8 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center mb-4">4
+          </div>
+          <h4 class="text-base font-bold text-primary">Placement Assistance</h4>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">Guidance on applying for
+            entry-level opportunities, interview tips, and job search strategy guidance.</p>
+        </div>
+      </div>
+
+      <!-- Transparent Career Commitment Card -->
+      <div
+        class="max-w-3xl mx-auto p-5 sm:p-6 bg-surface-container-low rounded-xl border border-outline-variant flex items-start gap-4">
+        <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">verified_user</span>
+        <div>
+          <h5 class="text-sm sm:text-base font-bold text-primary">Transparent Career Commitment</h5>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1.5 leading-relaxed">
+            Placement assistance is provided; employment is not guaranteed. We are committed to genuine skill building,
+            structured interview preparation, and mentorship. Individual career outcomes depend on regular attendance,
+            personal effort, and interview performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+10. CERTIFICATE SECTION
+================================================== -->
+  <section class="py-16 md:py-24 bg-surface-container-low border-b border-outline-variant" id="certificate">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">CREDENTIAL</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary">Mentry Solutions
+            Certificate of Completion</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed">
+            Upon successfully completing the program curriculum and delivering your final practical project, you receive
+            an official Mentry Solutions Certificate of Completion.
+          </p>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex items-start gap-3.5">
+              <span class="material-symbols-outlined text-secondary text-xl mt-0.5">verified</span>
+              <div>
+                <strong class="text-sm font-bold text-primary">Demonstrated Skill Completion</strong>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-0.5">Validates your attendance in live lectures
+                  and successful completion of programming assignments.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5">
+              <span class="material-symbols-outlined text-secondary text-xl mt-0.5">military_tech</span>
+              <div>
+                <strong class="text-sm font-bold text-primary">Practical Project Verification</strong>
+                <p class="text-xs sm:text-sm text-on-surface-variant mt-0.5">Documents the capstone software system or
+                  machine learning project built during the track.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Certificate Visual Presentation Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-white p-7 sm:p-8 rounded-2xl border border-outline-variant shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-5">
+              <div class="flex items-center gap-2.5">
+                <div
+                  class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant">
+                  <img alt="Mentry Logo" class="w-6 h-6 object-contain" src="assets/images/logo.png"
+                    onerror="this.src='assets/images/logo.svg'">
+                </div>
+                <span class="text-xs font-bold font-headline-sm text-primary uppercase tracking-wider">Mentry
+                  Solutions</span>
+              </div>
+              <span
+                class="text-[10px] font-mono px-2 py-0.5 bg-secondary-container text-secondary font-bold rounded">OFFICIAL
+                CREDENTIAL</span>
+            </div>
+            <div class="text-center py-4 space-y-2">
+              <span class="text-[11px] uppercase tracking-widest text-on-surface-variant font-medium">Certificate of
+                Completion</span>
+              <h4 class="text-lg sm:text-xl font-bold font-headline-md text-primary">Awarded for Successful Program
+                Completion</h4>
+              <p class="text-xs text-on-surface-variant max-w-sm mx-auto">Has demonstrated competence in hands-on
+                development, core programming concepts, and capstone project delivery.</p>
+            </div>
+            <div
+              class="flex items-center justify-between pt-5 border-t border-outline-variant text-[11px] text-on-surface-variant mt-4">
+              <span>Trainer Network Authorized</span>
+              <span>Credential ID: MS-2026-CERT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+11. FREQUENTLY ASKED QUESTIONS
+================================================== -->
+  <section class="py-16 md:py-24 bg-white border-b border-outline-variant" id="faq">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">CLEAR ANSWERS</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Frequently Asked
+          Questions</h2>
+        <p class="text-base text-on-surface-variant mt-3 leading-relaxed">
+          Details about program schedules, weekly offline hub visits, and prerequisites.
+        </p>
+      </div>
+
+      <div class="space-y-3.5 max-w-3xl mx-auto">
+        <!-- Q1 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">1. Who can join these programs?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Our programs are designed for college students, freshers, aspiring developers, and beginners entering
+            technology. The foundational modules are also suitable for school students in Class 11 and 12 looking to
+            build programming logic early.
+          </div>
+        </details>
+        <!-- Q2 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">2. How are the classes conducted?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            All classes are conducted live online with an experienced instructor. Programs are designed around live
+            interactive learning rather than pre-recorded course libraries, allowing you to ask queries in real time.
+          </div>
+        </details>
+        <!-- Q3 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">3. What is the daily schedule and class duration?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Classes are currently planned for 5 days a week, with each live class lasting approximately 1 hour. This
+            structured, daily rhythm helps maintain focus and build consistent programming habits without overwhelming
+            college or school schedules.
+          </div>
+        </details>
+        <!-- Q4 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">4. How does the offline doubt-clearing session work?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            In addition to live online lectures during the week, students attend one offline doubt-clearing session each
+            week at our designated Mentry location. You can bring your laptop, sit with mentors, and debug errors
+            face-to-face.
+          </div>
+        </details>
+        <!-- Q5 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">5. Where is the offline training hub located?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            One offline doubt-clearing session each week at our designated Mentry location. Exact location details will
+            be shared during enrollment.
+          </div>
+        </details>
+        <!-- Q6 -->
+        <details
+          class="bg-surface-container-low rounded-xl border border-outline-variant p-5 group open:border-secondary transition-all">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-primary">
+            <span class="text-sm sm:text-base font-bold">6. What is the fee structure and how do I enroll?</span>
+            <span
+              class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+          </summary>
+          <div
+            class="pt-3 mt-2 border-t border-outline-variant text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            Exact pricing and batch schedule details are shared during enrollment. You can submit the enquiry form below
+            or click "Talk to Us" to connect with our academic counseling team.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+12. ADMISSION ENQUIRY SECTION
+================================================== -->
+  <section class="py-16 md:py-24 bg-surface-container-low border-b border-outline-variant" id="contact">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-xs font-label-sm uppercase tracking-widest text-secondary font-bold">ENQUIRE NOW</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-headline-lg font-bold text-primary mt-2">Ready to Start
+            Learning?</h2>
+          <p class="text-base text-on-surface-variant mt-2 leading-relaxed">
+            Tell us which program you're interested in and our team will share the next batch details.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 sm:p-10 rounded-2xl border border-outline-variant shadow-xs">
+          <form class="space-y-5" id="enquiryForm" onsubmit="handleEnquirySubmit(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-semibold text-primary uppercase tracking-wider mb-2"
+                  for="fullName">Name *</label>
+                <input
+                  class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/50 text-sm"
+                  id="fullName" placeholder="Your Full Name" required="" type="text">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-primary uppercase tracking-wider mb-2" for="email">Email
+                  *</label>
+                <input
+                  class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/50 text-sm"
+                  id="email" placeholder="name@example.com" required="" type="email">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-semibold text-primary uppercase tracking-wider mb-2" for="phone">Phone
+                  *</label>
+                <input
+                  class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/50 text-sm"
+                  id="phone" placeholder="+91 98765 43210" required="" type="tel">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-primary uppercase tracking-wider mb-2"
+                  for="program">Interested Program *</label>
+                <select
+                  class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/50 text-sm"
+                  id="program" required="">
+                  <option value="">Select a Program</option>
+                  <option value="java">Java Development (3–4 Months)</option>
+                  <option value="ai">AI &amp; Machine Learning (3–4 Months)</option>
+                  <option value="both">Both / General Counseling</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-primary uppercase tracking-wider mb-2"
+                for="message">Message (Optional)</label>
+              <textarea
+                class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/50 text-sm"
+                id="message" placeholder="Tell us if you are a college student, fresher, or aspiring developer..."
+                rows="3"></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+              <span class="text-xs text-on-surface-variant">Pricing and batch timings are shared during
+                counseling.</span>
+              <button
+                class="w-full sm:w-auto px-7 py-3 bg-primary text-white font-label-md font-semibold rounded-lg hover:bg-primary/90 shadow-xs transition-colors flex items-center justify-center gap-2 text-sm"
+                type="submit">
+                <span>Send Enquiry</span>
+                <span class="material-symbols-outlined text-base">send</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Frontend Confirmation Notice -->
+          <div class="hidden p-6 bg-surface-container-low border border-secondary/40 rounded-xl text-center space-y-2"
+            id="enquirySuccess">
+            <span class="material-symbols-outlined text-secondary text-3xl">check_circle</span>
+            <h4 class="text-base font-bold text-primary">Thank you for your enquiry!</h4>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Our academic team will contact you shortly with batch
+              schedule details and enrollment instructions.</p>
+            <button class="mt-3 text-xs text-secondary font-semibold hover:underline" onclick="resetEnquiryForm()"
+              type="button">Submit Another Enquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================
+13. SIMPLIFIED 4-COLUMN FOOTER
+================================================== -->
+  <footer class="bg-white border-t border-outline-variant pt-14 pb-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-outline-variant">
+
+        <!-- Column 1: Mentry Solutions Info -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-white p-1 border border-outline-variant flex items-center justify-center shrink-0">
+              <img alt="Mentry Solutions Logo" class="w-full h-full object-contain" src="assets/images/logo.png"
+                onerror="this.src='assets/images/logo.svg'">
+            </div>
+            <div>
+              <span class="text-base font-bold text-primary font-headline-sm block">Mentry Solutions</span>
+              <span class="text-[10px] text-secondary font-medium">Trainer Network &amp; Professional Training
+                Services</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant leading-relaxed">
+            Live technology training for college students, freshers, and aspiring developers. Focused daily instruction
+            paired with weekly in-person doubt resolution.
+          </p>
+        </div>
+
+        <!-- Column 2: Programs -->
+        <div>
+          <h4 class="text-sm font-bold text-primary mb-3 font-headline-sm">Programs</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#programs">Java Development</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#programs">AI &amp; Machine Learning</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#curriculum"
+                onclick="switchCurriculum('java')">Core Java Curriculum</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#curriculum"
+                onclick="switchCurriculum('ai')">Applied ML Curriculum</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Learning -->
+        <div>
+          <h4 class="text-sm font-bold text-primary mb-3 font-headline-sm">Learning</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#methodology">How We Teach</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#curriculum">Curriculum</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#projects">Projects</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#offline-support">Offline Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Support -->
+        <div>
+          <h4 class="text-sm font-bold text-primary mb-3 font-headline-sm">Support</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#career-support">Career Support</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Disclaimer -->
+      <div
+        class="pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-on-surface-variant space-y-3 md:space-y-0">
+        <div>
+          © 2026 Mentry Solutions. All Rights Reserved. Placement assistance is provided; employment is not guaranteed.
+        </div>
+        <div class="flex space-x-6">
+          <a class="hover:text-primary transition-colors" href="#hero">Back to Top</a>
+          <a class="hover:text-primary transition-colors" href="#contact">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================================================
+JAVASCRIPT INTERACTIONS & ACTIVE OBSERVER
+================================================== -->
+  <script>
+    // Mobile Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function toggleMobileMenu() {
+      if (!mobileMenu || !menuIcon) return;
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      if (!mobileMenu || !menuIcon) return;
+      mobileMenu.classList.add('hidden');
+      menuIcon.textContent = 'menu';
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Close mobile menu on clicking any navigation link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Mobile Learning Accordion Toggle
+    const mobileLearningBtn = document.getElementById('mobileLearningBtn');
+    const mobileLearningAccordion = document.getElementById('mobileLearningAccordion');
+    const mobileLearningIcon = document.getElementById('mobileLearningIcon');
+
+    if (mobileLearningBtn && mobileLearningAccordion) {
+      mobileLearningBtn.addEventListener('click', () => {
+        const isHidden = mobileLearningAccordion.classList.contains('hidden');
+        if (isHidden) {
+          mobileLearningAccordion.classList.remove('hidden');
+          if (mobileLearningIcon) mobileLearningIcon.classList.add('rotate-180');
+        } else {
+          mobileLearningAccordion.classList.add('hidden');
+          if (mobileLearningIcon) mobileLearningIcon.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // Curriculum Tab Switcher
+    function switchCurriculum(type) {
+      const javaCurriculum = document.getElementById('javaCurriculum');
+      const aiCurriculum = document.getElementById('aiCurriculum');
+      const tabJavaBtn = document.getElementById('tabJavaBtn');
+      const tabAiBtn = document.getElementById('tabAiBtn');
+
+      if (!javaCurriculum || !aiCurriculum || !tabJavaBtn || !tabAiBtn) return;
+
+      if (type === 'java') {
+        javaCurriculum.classList.remove('hidden');
+        aiCurriculum.classList.add('hidden');
+        tabJavaBtn.className = 'px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 bg-primary text-white shadow-xs';
+        tabAiBtn.className = 'px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 text-on-surface-variant hover:text-primary';
+      } else {
+        javaCurriculum.classList.add('hidden');
+        aiCurriculum.classList.remove('hidden');
+        tabAiBtn.className = 'px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 bg-primary text-white shadow-xs';
+        tabJavaBtn.className = 'px-6 py-2.5 rounded-lg font-label-md text-sm font-semibold transition-all duration-150 text-on-surface-variant hover:text-primary';
+      }
+    }
+
+    // Student Login Modal Functions
+    const studentLoginModal = document.getElementById('studentLoginModal');
+
+    function openStudentLoginModal() {
+      if (studentLoginModal) {
+        studentLoginModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+
+    function closeStudentLoginModal() {
+      if (studentLoginModal) {
+        studentLoginModal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    // Close modal on escape key or clicking backdrop
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeStudentLoginModal();
+    });
+    if (studentLoginModal) {
+      studentLoginModal.addEventListener('click', (e) => {
+        if (e.target === studentLoginModal) closeStudentLoginModal();
+      });
+    }
+
+    // Admission Enquiry Form Submit Handler
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('enquiryForm');
+      const successNotice = document.getElementById('enquirySuccess');
+      if (form && successNotice) {
+        form.classList.add('hidden');
+        successNotice.classList.remove('hidden');
+      }
+    }
+
+    function resetEnquiryForm() {
+      const form = document.getElementById('enquiryForm');
+      const successNotice = document.getElementById('enquirySuccess');
+      if (form && successNotice) {
+        form.reset();
+        form.classList.remove('hidden');
+        successNotice.classList.add('hidden');
+      }
+    }
+
+    // Active Navigation Indicator via IntersectionObserver
+    const sections = [
+      { id: 'programs', navId: 'nav-programs' },
+      { id: 'why-mentry', navId: 'nav-why-mentry' },
+      { id: 'methodology', navId: 'nav-learning' },
+      { id: 'offline-support', navId: 'nav-learning' },
+      { id: 'curriculum', navId: 'nav-learning' },
+      { id: 'projects', navId: 'nav-learning' },
+      { id: 'career-support', navId: 'nav-career-support' },
+      { id: 'faq', navId: 'nav-faq' }
+    ];
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const match = sections.find(s => s.id === entry.target.id);
+          if (match) {
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+            const activeNav = document.getElementById(match.navId);
+            if (activeNav) activeNav.classList.add('active');
+          }
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -60% 0px'
+    });
+
+    sections.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) navObserver.observe(el);
+    });
+  </script>
+
+</body>
+
+</html>

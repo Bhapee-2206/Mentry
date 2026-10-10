@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44" fill="none">
+  <!-- Mentry Solutions Logo Emblem -->
+  <rect width="44" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Graduation / Mentor Crest in Vibrant Cyan/Blue -->
+  <path d="M22 8L29 12L22 16L15 12L22 8Z" fill="#0284c7"/>
+  <circle cx="29" cy="14" r="1" fill="#0284c7"/>
+  <path d="M29 14V17.5" stroke="#0284c7" stroke-width="1" stroke-linecap="round"/>
+  <!-- Geometric "M" in Deep Navy -->
+  <path d="M13 32V18.5H16.8L22 24.8L27.2 18.5H31V32H27.5V23.2L22.9 28.8H21.1L16.5 23.2V32H13Z" fill="#0d2149"/>
+</svg>
